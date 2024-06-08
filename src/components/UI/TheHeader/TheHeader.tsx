@@ -14,8 +14,13 @@ const linksData: TLinksData[] = [
         title: 'Перейти на UseState',
     },
     {
-        pathname: 'Different',
+        pathname: '/Different',
         value: 'Реализация через UseRouter',
+        title: 'Перейти на UseRouter',
+    },
+    {
+        pathname: '/Other',
+        value: 'Реализация через Hook',
         title: 'Перейти на UseRouter',
     },
 ];
@@ -25,7 +30,7 @@ export const TheHeader = () => {
     const [activePage, setActivePage] = useState<string>(linksData[0].pathname)
 
     useEffect(() => {
-        pathname != activePage && setActivePage(pathname)
+        pathname != activePage && setActivePage(pathname);
     }, [pathname])
 
     return (

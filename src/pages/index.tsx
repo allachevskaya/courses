@@ -1,4 +1,5 @@
-import { MainDefault } from "@/components/Home/MainDefault/MainDefault";
+
+import { RenderWithState } from "@/components/Home/RenderWithState";
 import Layout from "@/components/UI/Layout";
 import { ICourse } from "@/interface/courses.interface";
 import { GetStaticProps, NextPage } from "next";
@@ -28,7 +29,7 @@ const Home: NextPage<PropsHome> = ({ courses }) => {
 
     return (
         <Layout meta={{}}>
-            <MainDefault data={courses} />
+            <RenderWithState data={courses} />
         </Layout>
     );
 }

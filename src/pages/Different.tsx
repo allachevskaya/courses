@@ -1,5 +1,4 @@
-
-import { MainDifferent } from "@/components/Home/MainDifferent/MainDiffetent";
+import { RenderWithRouter } from "@/components/Home/RenderWithRouter";
 import Layout from "@/components/UI/Layout";
 import { ICourse } from "@/interface/courses.interface";
 import { GetStaticProps, NextPage } from "next";
@@ -26,10 +25,10 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const Different: NextPage<PropsHome> = ({ courses }) => {
-   
+
     return (
         <Layout meta={{}}>
-            <MainDifferent data={courses}/>
+            <RenderWithRouter data={courses} />
         </Layout>
     );
 }

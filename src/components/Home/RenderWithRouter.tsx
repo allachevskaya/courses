@@ -1,15 +1,15 @@
 import { ICourse } from '@/interface/courses.interface'
-import styles from '../Main.module.sass'
+import styles from './Main.module.sass'
 import { v4 as uuidv4 } from 'uuid';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { findUniqueTags } from '@/utils/findUniqueTags';
-import { MainCard } from '../MainCard';
+import { MainCard } from './MainCard';
 
 
-export const MainDifferent = ({ data }: { data: ICourse[] }) => {
+export const RenderWithRouter = ({ data }: { data: ICourse[] }) => {
 
     const [currentCourses, setCurrentCourses] = useState<ICourse[]>(data);
     const router = useRouter();
