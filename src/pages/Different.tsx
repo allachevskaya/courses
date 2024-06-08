@@ -1,4 +1,5 @@
-import { MainDefault } from "@/components/Home/MainDefault/MainDefault";
+
+import { MainDifferent } from "@/components/Home/MainDifferent/MainDiffetent";
 import Layout from "@/components/UI/Layout";
 import { ICourse } from "@/interface/courses.interface";
 import { GetStaticProps, NextPage } from "next";
@@ -24,12 +25,12 @@ export const getStaticProps: GetStaticProps = async () => {
     }
 }
 
-const Home: NextPage<PropsHome> = ({ courses }) => {
-
+const Different: NextPage<PropsHome> = ({ courses }) => {
+   
     return (
         <Layout meta={{}}>
-            <MainDefault data={courses} />
+            <MainDifferent data={courses}/>
         </Layout>
     );
 }
-export default Home
+export default Different

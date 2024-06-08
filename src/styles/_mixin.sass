@@ -1,0 +1,22 @@
+@use 'sass:math'
+@import "variables"
+
+@function calcWidth1920($n)
+    @return $n*math.div(100vw,1920)
+@function calcWidth1440($n)
+    @return $n*math.div(100vw,1440)
+@function calcWidth1200($n)
+    @return $n*math.div(100vw,1200)
+@function calcWidth992($n)
+    @return $n*math.div(100vw,992)
+@function calcWidth768($n)
+    @return $n*math.div(100vw,768)
+@function calcWidth480($n)
+    @return $n*math.div(100vw,480)
+@function calcWidth380($n)
+    @return $n*math.div(100vw,390)
+
+@mixin container()
+    width: 1503px
+    @media (max-width:1551px)
+        width: calc( 100% - 48px )

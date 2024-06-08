@@ -1,0 +1,15 @@
+@import '@/styles/mixin'
+
+.header 
+    @include container()
+    display: flex 
+    justify-content: flex-end
+    gap: 24px
+    margin: 30px auto
+    &Active 
+        background: $green !important
+    a 
+        border-radius: $borderRadius 
+        border: 1px solid $green
+        padding: 12px
+        text-align: center
